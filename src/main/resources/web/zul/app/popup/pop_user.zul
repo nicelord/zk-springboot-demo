@@ -1,0 +1,52 @@
+<zk>
+
+    <window id="pop_user"
+            mode="modal"
+            width="400px"
+            vflex="1"
+            title="ADD NEW APP USER"
+            border="normal"
+            closable="true"
+            viewModel="@id('vm') @init('com.example.zkspringbootweb.vm.PopUserVM')">
+
+        <grid hflex="true">
+            <columns>
+                <column width="160px"/>
+                <column vflex="3"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="Username :"/>
+                    <textbox constraint="no empty" hflex="3" value="@save(vm.appUser.username)" placeholder="username"/>
+                </row>
+                <row>
+                    <label value="Email :"/>
+                    <textbox constraint="/.+@.+\.[a-z]+/: Please enter an e-mail address" hflex="3"
+                             value="@save(vm.appUser.email)" placeholder="email"/>
+                </row>
+                <row>
+                    <label value="Password :"/>
+                    <textbox type="password" constraint="no empty" hflex="3" value="@save(vm.appUser.password)"
+                             placeholder="password"/>
+                </row>
+
+                <row>
+                    <label value="Role :"/>
+                    <combobox readonly="true"
+                              hflex="3"
+                              value="@save(vm.appUser.role)">
+                        <comboitem label="ADMIN"/>
+                        <comboitem label="USER"/>
+                    </combobox>
+                </row>
+
+            </rows>
+            <foot>
+                <footer span="2" id="footer_category" align="right">
+                    <button iconSclass="glyphicon glyphicon-floppy-disk" sclass="btn-success"
+                            onClick="@command('save')" label="Save"/>
+                </footer>
+            </foot>
+        </grid>
+    </window>
+</zk>

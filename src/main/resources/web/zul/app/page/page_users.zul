@@ -1,0 +1,101 @@
+<zk>
+    <panel title="USER MANAGEMENT" vflex="3" border="none" viewModel="@id('vm') @init('com.example.zkspringbootweb.vm.PageUsersVM')">
+        <caption iconSclass="z-icon-users"/>
+        <panelchildren>
+            <menubar>
+                <menu label="File">
+                    <menupopup>
+                        <menuitem label="New"
+                                  iconSclass="z-icon-file"
+                                  onClick="@command('showAddUserForm')"/>
+                        <menuseparator></menuseparator>
+                        <menuitem label="Export"
+                                  iconSclass="fas fa-file-export"/>
+                    </menupopup>
+                </menu>
+            </menubar>
+            <borderlayout vflex="3">
+                <center>
+                    <listbox id="usersGrid" vflex="3" mold="paging" pageSize="25"
+
+                             selectedItem="@bind(vm.selectedUser)"
+                             model="@load(vm.myUserListModel)">
+                        <auxhead>
+                            <auxheader>
+                                <span sclass="z-icon-filter"/>
+                                <textbox instant="true" width="100px" value="@bind(vm.usernameFilter)"
+                                         onChange="@command('changeFilter')"/>
+                            </auxheader>
+                            <auxheader>
+                            </auxheader>
+                            <auxheader>
+                            </auxheader>
+                            <auxheader>
+                            </auxheader>
+                        </auxhead>
+                        <listhead>
+                            <listheader label="Username" sort="auto(username)"/>
+                            <listheader label="Password" sort="auto(password)"/>
+                            <listheader label="Role" sort="auto(role)"/>
+                            <listheader label="Action"/>
+                        </listhead>
+                        <template name="model" var="user">
+                            <listitem>
+                                <listcell label="${user.username}"/>
+                                <listcell label="${user.password}"/>
+                                <listcell label="${user.role}"/>
+                                <listcell>
+                                    <button label="Delete"
+                                            iconSclass="fal fa-trash-alt"
+                                            sclass="button-danger"
+                                            onClick="@command('delete', user=user)"/>
+                                </listcell>
+                            </listitem>
+                        </template>
+<!--                        <listfoot>-->
+<!--                            <listfooter>-->
+<!--                                <button label="TEST"></button>-->
+
+<!--                            </listfooter>-->
+<!--                        </listfoot>-->
+                    </listbox>
+
+                </center>
+                <east title="DETAILS" size="40%" splittable="true" collapsible="true">
+                    <grid>
+                        <columns>
+                            <column width="130px"/>
+                            <column vflex="3"/>
+                        </columns>
+                        <rows>
+                            <row>
+                                <label value="Username :"/>
+                                <textbox value="@bind(vm.selectedUser.username)" constraint="no empty"/>
+                            </row>
+                            <row>
+                                <label value="Password :"/>
+                                <textbox type="password" value="@bind(vm.selectedUser.password)" constraint="no empty"/>
+                            </row>
+                            <row>
+                                <label value="Role :"/>
+                                <combobox readonly="true"
+                                          value="@bind(vm.selectedUser.role)">
+                                    <comboitem label="ADMIN"/>
+                                    <comboitem label="USER"/>
+                                </combobox>
+                            </row>
+
+                        </rows>
+                        <foot>
+                            <footer span="2" align="right">
+                                <button label="UPDATE"
+                                        onClick="@command('update', user=vm.selectedUser)"/>
+                            </footer>
+                        </foot>
+                    </grid>
+                </east>
+            </borderlayout>
+        </panelchildren>
+    </panel>
+
+</zk>

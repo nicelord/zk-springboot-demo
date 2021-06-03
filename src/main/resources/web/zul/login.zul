@@ -1,0 +1,44 @@
+<zk xmlns:n="native" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="native ">
+
+    <window id="pop_user"
+            mode="modal"
+            width="300px"
+            vflex="1"
+            title="LOGIN SIMPLE CMS"
+            border="normal"
+            draggable="false"
+            droppable="false"
+            closable="false">
+        <n:form action="/login" method="POST">
+            <grid hflex="true">
+                <columns>
+                    <column width="100px"/>
+                    <column vflex="3"/>
+                </columns>
+                <rows>
+                    <row>
+                        <label value="Username :"/>
+                        <textbox constraint="no empty" name="username" value="admin" hflex="3"
+                                 placeholder="username"/>
+                    </row>
+                    <row>
+                        <label value="Password :"/>
+                        <textbox type="password" name="password" value="admin" constraint="no empty" hflex="3"
+                                 placeholder="password"/>
+                    </row>
+
+                    <row spans="2" align="center">
+                        <label style="color:red;" value="${errorMessage}"/>
+                    </row>
+                </rows>
+                <foot>
+                    <footer span="2" id="footer_category" align="center">
+                        <button id="login" label="Login" hflex="3" sclass="btn-success" iconSclass="glyphicon glyphicon-log-in" type="submit">
+                        </button>
+                    </footer>
+                </foot>
+            </grid>
+        </n:form>
+    </window>
+
+</zk>

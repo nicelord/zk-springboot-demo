@@ -1,0 +1,25 @@
+<?taglib uri="http://www.zkoss.org/zkspring/security" prefix="sec"?>
+<zk>
+    <navbar id="navbar" orient="vertical" collapsed="false">
+        <navitem label="Dashboard" iconSclass="z-icon-home"
+                 onClick="@command('navigate', page='page_dashboard.zul')"/>
+
+        <navitem label="Users" iconSclass="z-icon-home"
+                 onClick="@command('navigate', page='page_users.zul')"
+                 if="${sec:isAllGranted('ROLE_ADMIN')}"/>
+
+<!--        <navitem label="Sertifikat" iconSclass="z-icon-home"-->
+<!--                 onClick="@command('navigate', page='page_sertifikat.zul')"-->
+<!--                 if="${sec:isAllGranted('ROLE_ADMIN')}"/>-->
+
+<!--        <navitem label="Users" iconSclass="z-icon-users"-->
+<!--                 onClick="@command('navigate', page='page_users.zul')"-->
+<!--                 if="${sec:isAllGranted('ROLE_ADMINISTRATOR')}"/>-->
+<!--        <navitem label="Menu 3" iconSclass="z-icon-home"/>-->
+<!--        <nav label="Get Started" iconSclass="z-icon-th-list" badgeText="3">-->
+<!--            <navitem label="Step One"/>-->
+<!--            <navitem label="Step Two"/>-->
+<!--            <navitem label="Step Three"/>-->
+<!--        </nav>-->
+    </navbar>
+</zk>

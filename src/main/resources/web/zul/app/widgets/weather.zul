@@ -1,0 +1,15 @@
+<zk xmlns:n="native" xmlns:w="client">
+	<style>
+		.weather {
+			border-radius: 3px;
+			border: 1px solid #ccc;
+			margin: 3px;
+			padding: 1px;
+			text-align: center;
+		}
+	</style>
+	<div sclass="weather" hflex="1">
+		<image src="/img/weather-1.png"/>
+		<image src="/img/weather-2.png"/>
+	</div>
+</zk>

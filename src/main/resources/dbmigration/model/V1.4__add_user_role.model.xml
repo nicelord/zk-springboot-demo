@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<migration xmlns="http://ebean-orm.github.io/xml/ns/dbmigration">
+    <changeSet type="apply">
+        <addColumn tableName="users">
+            <column name="role" type="varchar(5)" defaultValue="'USER'" checkConstraint="check ( role in ('ADMIN','USER'))" checkConstraintName="ck_users_role"/>
+        </addColumn>
+    </changeSet>
+    <changeSet type="pendingDrops">
+        <dropColumn columnName="access" tableName="users"/>
+        <dropColumn columnName="address" tableName="users"/>
+        <dropColumn columnName="any" tableName="users"/>
+    </changeSet>
+</migration>

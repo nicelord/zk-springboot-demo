@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+    <config-name>zkspringboot-demo</config-name>
+    <!--enable websocket support in ZK 8.5.1 (ZK-3799)  -->
+    <!--<listener>-->
+    <!--<listener-class>org.zkoss.zkmax.au.websocket.WebSocketWebAppInit</listener-class>-->
+    <!--</listener>-->
+
+    <library-property>
+        <name>org.zkoss.zul.Paging.mold</name>
+        <value>os</value>
+    </library-property>
+
+    <library-property>
+        <name>org.zkoss.theme.preferred</name>
+        <value>iceblue_c</value>
+    </library-property>
+
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zul.Button.mold</name>-->
+    <!--<value>bs</value>-->
+    <!--</library-property>-->
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zul.Menupopup.mold</name>-->
+    <!--<value>bs</value>-->
+    <!--</library-property>-->
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zkmax.zul.Navbar.mold</name>-->
+    <!--<value>bs</value>-->
+    <!--</library-property>-->
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zul.Paging.mold</name>-->
+    <!--<value>bs</value>-->
+    <!--</library-property>-->
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zul.Panel.mold</name>-->
+    <!--<value>bs</value>-->
+    <!--</library-property>-->
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zul.grid.rod</name>-->
+    <!--<value>true</value>-->
+    <!--</library-property>-->
+
+    <!--    <library-property>-->
+    <!--        <name>org.zkoss.zul.theme.fontFamilyT</name>-->
+    <!--        <value>Segoe UI Light</value>-->
+    <!--    </library-property>-->
+    <!--    <library-property>-->
+    <!--        <name>org.zkoss.zul.theme.fontFamilyC</name>-->
+    <!--        <value>Segoe UI Light</value>-->
+    <!--    </library-property>-->
+
+    <!--    <library-property>-->
+    <!--        <name>org.zkoss.zul.progressbox.position</name>-->
+    <!--        <value>center</value>-->
+    <!--    </library-property>-->
+
+    <!--    <library-property>-->
+    <!--        <name>org.zkoss.zul.listbox.rightSelect</name>-->
+    <!--        <value>false</value>-->
+    <!--    </library-property>-->
+
+    <!--    <library-property>-->
+    <!--        <name>org.zkoss.zul.listbox.rod</name>-->
+    <!--        <value>true</value>-->
+    <!--    </library-property>-->
+
+
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zul.listbox.autohidePaging</name>-->
+    <!--<value>false</value>-->
+    <!--</library-property>-->
+
+    <!--<library-property>-->
+    <!--<name>org.zkoss.zul.nativebar</name>-->
+    <!--<value>false</value>-->
+    <!--</library-property>-->
+
+    <library-property>
+        <name>org.zkoss.zul.image.preload</name>
+        <value>true</value>
+    </library-property>
+
+    <session-config>
+        <!--<device-type>ajax</device-type>-->
+        <timeout-uri>/login</timeout-uri>
+        <timeout-message>Session timed out!, please re-login!</timeout-message>
+    </session-config>
+
+    <!--    <library-property>-->
+    <!--        <name>org.zkoss.zul.listbox.checkmarkDeselectOthers</name>-->
+    <!--        <value>true</value>-->
+    <!--    </library-property>-->
+<!--    <library-property>-->
+<!--        <name>org.zkoss.zul.grid.rod</name>-->
+<!--        <value>true</value>-->
+<!--    </library-property>-->
+<!--    <library-property>-->
+<!--        <name>org.zkoss.zul.grid.initRodSize</name>-->
+<!--        <value>30</value>-->
+<!--    </library-property>-->
+
+</zk>

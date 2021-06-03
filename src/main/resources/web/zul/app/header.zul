@@ -1,0 +1,23 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk>
+    <hbox vflex="3" hflex="3" align="center" style="padding-left: 5px">
+        <label value="SIMPLE DEMO" style="font-weight:bold;color:#2f5687"/>
+
+        <hlayout hflex="3" style="text-align:right;">
+            <inputgroup>
+                <a iconSclass="z-icon-user z-icon-2x"/>
+                <combobutton label="${authentication.principal.username}">
+<!--                <combobutton label="Logged in as :">-->
+                    <menupopup>
+                        <menuitem label="Action"/>
+                        <menuitem label="Another action"/>
+                        <menuitem label="Something else here"/>
+                        <menuseparator/>
+                        <menuitem label="Logout" onClick="@command('logout')"/>
+                    </menupopup>
+                </combobutton>
+            </inputgroup>
+        </hlayout>
+    </hbox>
+</zk>

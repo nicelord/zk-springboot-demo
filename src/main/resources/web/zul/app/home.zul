@@ -1,0 +1,9 @@
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="~./zul/app/template.zul"?>
+<?link rel="stylesheet" type="text/css" href="/css/web-globalstyles.css"?>
+<?link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"?>
+<div self="@define(content)" vflex="true">
+    <include src="@load(root.currentPage)" mode="instant"/>
+    <!--<apply templateURI="@load(vm.currentPage)"/>-->
+</div>
+
+

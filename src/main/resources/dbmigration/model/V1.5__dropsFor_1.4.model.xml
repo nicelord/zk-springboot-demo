@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<migration xmlns="http://ebean-orm.github.io/xml/ns/dbmigration">
+    <changeSet type="apply" dropsFor="1.4">
+        <dropColumn columnName="access" tableName="users"/>
+        <dropColumn columnName="address" tableName="users"/>
+        <dropColumn columnName="any" tableName="users"/>
+    </changeSet>
+</migration>

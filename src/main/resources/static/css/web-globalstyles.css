@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jan 27, 2015, 9:01:12 PM
+    Author     : Reza Elborneo
+*/
+
+.btn, .form-control, .z-combobox-input, .z-combobox-popup, .z-combobox-button, .z-intbox, .z-intbox-invalid, .z-textbox, .z-textbox-invalid, .label,
+.z-datebox-input, .z-datebox-icon, .z-datebox-calendar, .z-datebox-button, .z-datebox-popup, .z-datebox-open, .z-datebox-shadow,
+.z-timebox-input, .z-timebox-button, .input-group-addon, .z-window-icon, .z-button, .z-longbox, .z-tab, .z-tab-content, .z-menupopup, input[type="checkbox"], .z-bandbox-input, .z-bandbox-button,
+.z-bandbox-popup, .z-bandbox-open, .z-bandbox-shadow, .z-comboitem,.z-timepicker-input,.z-timepicker-button,.z-timepicker-popup, .z-inputgroup:not(.z-inputgroup-vertical)>:first-child, .z-combobutton, .z-inputgroup:not(.z-inputgroup-vertical)>:last-child,
+.z-menu-content, .z-menuitem-content{
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+.z-panel-head{
+    background: #6e6e6e;
+}
+.z-panel-header {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
+    border: 0;
+    padding: 7px 5px 5px 15px;
+    line-height: 24px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.button-danger{
+    background-color: #ff6961;
+}
+.button-danger:hover{
+    background-color: #ff817b;
+}
+.button-danger:active{
+    background-color: #ff392e;
+}
+.button-danger:focus{
+    background-color: #ff392e;
+}
+
+.z-window{
+    background-color: #0093f9;
+
+}
+
+.z-window-header{
+    color: #f2f2f2;
+    font-weight: bold;
+}
+
+

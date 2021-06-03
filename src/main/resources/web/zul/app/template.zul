@@ -1,0 +1,20 @@
+<zk>
+
+    <borderlayout viewModel="@id('root') @init('com.example.zkspringbootweb.vm.AppVM')">
+        <north height="40px">
+            <include src="~./zul/app/header.zul"/>
+        </north>
+        <west title="NAVIGATION" size="15%" maxsize="250" splittable="true" collapsible="true" open="true"
+              border="normal">
+            <include src="~./zul/app/sidebar.zul"/>
+        </west>
+        <center border="normal" autoscroll="true" self="@insert(content)">
+
+        </center>
+        <south height="30px">
+            <div hflex="1" vflex="1" align="center">
+
+            </div>
+        </south>
+    </borderlayout>
+</zk>

@@ -1,0 +1,76 @@
+<zk>
+    <?link rel="stylesheet" type="text/css" href="/css/web-globalstyles.css"?>
+
+    <borderlayout hflex="true" viewModel="@id('vm') @init('dev.dwms.vm.ResVM')">
+        <north height="40px">
+
+        </north>
+        <west title="NAVIGATION" size="15%" maxsize="250" splittable="true" collapsible="true" open="true"
+              border="normal" hflex="min">
+            <navbar id="navbar" orient="vertical" collapsed="false">
+                <navitem label="Home" iconSclass="z-icon-home"/>
+                <navitem label="Home" iconSclass="z-icon-home"/>
+                <navitem label="Home" iconSclass="z-icon-home"/>
+                <navitem label="Home" iconSclass="z-icon-home"/>
+                <navitem label="Home" iconSclass="z-icon-home"/>
+                <navitem label="Home" iconSclass="z-icon-home"/>
+                <navitem label="Home" iconSclass="z-icon-home"/>
+                <nav label="Get Started" iconSclass="z-icon-th-list" badgeText="3">
+                    <navitem label="Step One" />
+                    <navitem label="Step Two" />
+                    <navitem label="Step Three" />
+                </nav>
+
+
+                <!--                <nav label="ZK's Pizza" iconSclass="z-icon-home"/>-->
+
+                <!--                <nav label="Customers" iconSclass="z-icon-group" badgeText="3"/>-->
+
+                <!--                <nav label="Orders" iconSclass="z-icon-truck" badgeText="4"/>-->
+
+                <!--                <nav label="Fan Service" iconSclass="z-icon-star"/>-->
+            </navbar>
+
+        </west>
+        <center border="normal" hflex="true" autoscroll="true">
+            <grid id="myGrid" vflex="3" mold="paging" model="@load(vm.myUserListModel)">
+                <auxhead>
+                    <auxheader>
+                        <span sclass="z-icon-filter"/>
+                        <textbox instant="true" width="100px" value="@bind(vm.usernameFilter)"
+                                 onChange="@command('changeFilter')"/>
+                    </auxheader>
+                    <auxheader>
+                    </auxheader>
+                    <auxheader>
+
+                    </auxheader>
+                </auxhead>
+                <columns>
+                    <column label="Username" sort="auto(username)"/>
+                    <column label="Password" sort="auto(password)"/>
+                    <column label="Akses" sort="auto(akses)"/>
+                </columns>
+                <template name="model">
+                    <row>
+                        <label value="${each.username}"/>
+                        <label value="${each.password}"/>
+                        <label value="${each.akses}"/>
+                    </row>
+                </template>
+                <foot>
+                    <footer>
+                        <button label="TEST"></button>
+
+                    </footer>
+                </foot>
+            </grid>
+        </center>
+        <south height="30px">
+            <div hflex="1" vflex="1" sclass="footer" align="center">
+                PT. Desa Air Cargo Batam
+            </div>
+
+        </south>
+    </borderlayout>
+</zk>
